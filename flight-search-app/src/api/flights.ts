@@ -726,9 +726,9 @@ const flights: Flight[] = [
     code: 'BJM',
     departureAirport: 'Ankara Esenboğa Airport',
     arrivalAirport: 'Bodrum Milas Airport',
-    departureDate: '2024-03-17T13:30:00',
-    returnDate: '2024-04-17T18:30:00',
-    duration: '1h 55m',
+    departureDate: '2024-03-17T11:30:00',
+    returnDate: '2024-04-17T13:30:00',
+    duration: '1h 35m',
     price: 890,
   },
   {

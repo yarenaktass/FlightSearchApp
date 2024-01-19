@@ -9,10 +9,6 @@ import {
   Button,
 } from "@mui/material";
 import { formatDate } from "../model/util";
-import { useEffect } from "react";
-import { fetchFlights } from "../store/flightSlice";
-import { useAppDispatch, useAppSelector } from "../store/ConfigureStore";
-import Loading from "./Loading";
 import Flight from "../model/Flight";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 
@@ -21,17 +17,6 @@ interface FlightListProps {
 }
 
 const FlightList = ({ filteredFlights }: FlightListProps) => {
-  const dispatch = useAppDispatch();
-  const { flightsLoaded, status } = useAppSelector((state) => state.flights);
-
-  useEffect(() => {
-    if (!flightsLoaded) dispatch(fetchFlights());
-  }, [flightsLoaded, dispatch]);
-
-  if (status === "pendingFetchFlights") {
-    return <Loading message="Loading..." />;
-  }
-
   return (
     <>
       {filteredFlights.length > 0 && (
@@ -115,7 +100,10 @@ const FlightList = ({ filteredFlights }: FlightListProps) => {
                   <TableCell>{flight.duration}</TableCell>
                   <TableCell>{flight.price}₺</TableCell>
                   <TableCell>
-                    <Button   variant="outlined" sx={{ color: "#2764a8", backgroundColor:"#abb8c3" }}>
+                    <Button
+                      variant="outlined"
+                      sx={{ color: "#2764a8", backgroundColor: "#abb8c3" }}
+                    >
                       BUY
                       <FlightTakeoffIcon sx={{ color: "#2764a8" }} />
                     </Button>
