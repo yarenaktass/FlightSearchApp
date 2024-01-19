@@ -115,9 +115,9 @@ const FlightList = ({ filteredFlights }: FlightListProps) => {
                   <TableCell>{flight.duration}</TableCell>
                   <TableCell>{flight.price}₺</TableCell>
                   <TableCell>
-                    <Button sx={{ color: "#6497d3" }}>
+                    <Button   variant="outlined" sx={{ color: "#2764a8", backgroundColor:"#abb8c3" }}>
                       BUY
-                      <FlightTakeoffIcon sx={{ color: "#6497d3" }} />
+                      <FlightTakeoffIcon sx={{ color: "#2764a8" }} />
                     </Button>
                   </TableCell>
                 </TableRow>
