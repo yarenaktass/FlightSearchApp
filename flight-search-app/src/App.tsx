@@ -1,13 +1,10 @@
-import FlightFilterContainer from './components/FlightFilterConatiner';
-import { AppBar, Toolbar, Box, Typography } from '@mui/material';
-
-
+import FlightFilterContainer from "./components/FlightFilterConatiner";
+import { AppBar, Toolbar, Box, Typography } from "@mui/material";
 
 const App = () => {
- 
   return (
     <>
-       <div>
+      <div>
         <AppBar position="static" sx={{ backgroundColor: "#e1779b", mb: 4 }}>
           <Toolbar>
             <Box sx={{ flex: 1, display: "flex", justifyContent: "center" }}>
@@ -17,10 +14,8 @@ const App = () => {
         </AppBar>
       </div>
       <FlightFilterContainer />
-
     </>
   );
-
-}
+};
 
 export default App;

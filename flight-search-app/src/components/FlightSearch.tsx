@@ -17,7 +17,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import airportData from "../api/airportData";
 import { toast } from "react-toastify";
-import AirplaneTicketIcon from '@mui/icons-material/AirplaneTicket';
+import AirplaneTicketIcon from "@mui/icons-material/AirplaneTicket";
 
 interface FlightSearchProps {
   onSearch: (searchParams: any) => void;
@@ -32,7 +32,6 @@ const validationSchema = yup.object({
   oneWay: yup.boolean(),
 });
 
-
 export default function FlightSearch({ onSearch }: FlightSearchProps) {
   const formRef = useRef<FormikProps<any> | null>(null);
   const [disableReturnDate, setDisableReturnDate] = useState(false);
@@ -44,25 +43,26 @@ export default function FlightSearch({ onSearch }: FlightSearchProps) {
     returnDate: null,
     oneWay: false,
   });
- 
+
   const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { checked } = event.target;
 
     setFlightSearch((prevFlightSearch) => ({
       ...prevFlightSearch,
       oneWay: checked,
-      returnDate: checked ? null : prevFlightSearch.returnDate,  
+      returnDate: checked ? null : prevFlightSearch.returnDate,
     }));
     setDisableReturnDate(checked);
     if (formRef.current) {
       formRef.current.setFieldValue("oneWay", checked);
-      formRef.current.setFieldValue("returnDate", checked ? null : formRef.current.values.returnDate);  
+      formRef.current.setFieldValue(
+        "returnDate",
+        checked ? null : formRef.current.values.returnDate
+      );
     }
   };
 
   const handleSubmit = async (values: any) => {
-    console.log("handleSubmit is called with values:", values);
-
     if (!values.oneWay && !values.returnDate) {
       toast.error("Return Date is required", { autoClose: 2000 });
       return;
@@ -72,11 +72,11 @@ export default function FlightSearch({ onSearch }: FlightSearchProps) {
 
   return (
     <>
-       <Card sx={{ border: "2px solid #ae7d8d" }}>
+      <Card sx={{ border: "2px solid #ae7d8d" }}>
         <CardContent sx={{ borderBottom: "2px solid #ae7d8d" }}>
           <Typography variant="h5" sx={{ marginBottom: 2 }}>
-          <span>Plane Ticket</span>
-          <AirplaneTicketIcon sx={{ marginLeft: 1, fontSize:'30px' }} />
+            <span>Plane Ticket</span>
+            <AirplaneTicketIcon sx={{ marginLeft: 1, fontSize: "30px" }} />
           </Typography>
           <Formik
             initialValues={flightSearch}
@@ -104,7 +104,7 @@ export default function FlightSearch({ onSearch }: FlightSearchProps) {
                     onChange={(_, value) => {
                       formRef.current?.setFieldValue(
                         "departureAirport",
-                        value?.name || "" 
+                        value?.name || ""
                       );
                     }}
                   />

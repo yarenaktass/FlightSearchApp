@@ -17,7 +17,7 @@ import Flight from "../model/Flight";
 import FlightTakeoffIcon from "@mui/icons-material/FlightTakeoff";
 
 interface FlightListProps {
-  filteredFlights:Flight[];
+  filteredFlights: Flight[];
 }
 
 const FlightList = ({ filteredFlights }: FlightListProps) => {
@@ -34,7 +34,6 @@ const FlightList = ({ filteredFlights }: FlightListProps) => {
 
   return (
     <>
-
       {filteredFlights.length > 0 && (
         <TableContainer component={Paper}>
           <Table>
