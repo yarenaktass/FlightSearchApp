@@ -7,7 +7,7 @@ FlightSerachApp with react.js
 # In the project directory, you can run:
 
 ### `cd FlightSearchApp-main`
-### `cd flight-searc-app`
+### `cd flight-search-app`
 ### `npm install -g create-vite`
 ### `npm install`
 ### `npm run dev`
