@@ -5,7 +5,8 @@ FlightSerachApp with react.js
 # Available Scripts
 
 In the project directory, you can run:
-### npm install -g create-vite
+### `npm install -g create-vite`
+### `npm install`
 ### `cd FlightSearchApp-main`
 ### `cd flight-searc-app`
 ### `npm run dev`
