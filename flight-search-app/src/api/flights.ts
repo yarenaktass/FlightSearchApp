@@ -719,7 +719,7 @@ const flights: Flight[] = [
     departureDate: '2024-03-16T12:00:00',
     returnDate: '2024-04-16T17:00:00',
     duration: '1h 50m',
-    price: 870,
+    price: 860,
   },
   {
     id: 71,
