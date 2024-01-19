@@ -123,7 +123,7 @@ const flights: Flight[] = [
   },
   {
     id: 14,
-    code: 'MLX',
+    code: 'IST',
     departureAirport: 'Istanbul Airport',
     arrivalAirport: 'Bodrum Milas Airport',
     departureDate: '2024-03-14T05:15:00',
@@ -133,7 +133,7 @@ const flights: Flight[] = [
   },
   {
     id: 15,
-    code: 'MLX',
+    code: 'IST',
     departureAirport: 'Istanbul Airport',
     arrivalAirport: 'Bodrum Milas Airport',
     departureDate: '2024-03-15T06:30:00',
@@ -143,7 +143,7 @@ const flights: Flight[] = [
   },
   {
   id: 16,
-  code: 'MLX',
+  code: 'IST',
   departureAirport: 'Istanbul Airport',
   arrivalAirport: 'Bodrum Milas Airport',
   departureDate: '2024-03-16T08:45:00',
