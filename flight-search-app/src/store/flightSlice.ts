@@ -31,10 +31,7 @@ export const fetchFlights = createAsyncThunk<Flight[]>(
 export const flightSlice = createSlice({
   name: 'flights',
   initialState,
-  reducers: {
-    setFlights: flightAdapter.setAll,
-
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchFlights.pending, (state) => {
@@ -52,7 +49,6 @@ export const flightSlice = createSlice({
   },
 });
 
-export const { setFlights } = flightSlice.actions;
 export const flightSelectors = flightAdapter.getSelectors<RootState>((state) => state.flights);
 
 export default flightSlice.reducer;
